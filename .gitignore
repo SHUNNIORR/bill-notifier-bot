@@ -1,0 +1,24 @@
+# Dependencias (se reinstalan con `npm install`)
+node_modules/
+
+# Archivos locales y caché de Wrangler / Cloudflare
+.wrangler/
+.dev.vars
+.dev.vars.*
+
+# Variables de entorno y secretos (el token de Telegram nunca va al repo)
+.env
+.env.*
+
+# Logs
+*.log
+npm-debug.log*
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Carpeta que crea la app de Claude
+Claude outputs/

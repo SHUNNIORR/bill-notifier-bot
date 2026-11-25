@@ -1,0 +1,16 @@
+name = "bill-notifier"
+main = "src/index.js"
+compatibility_date = "2026-11-01"
+
+# Cloudflare usa UTC. Colombia = UTC-5:
+#   13:00 UTC = 8:00 a. m. Bogotá   |   23:00 UTC = 6:00 p. m. Bogotá
+[triggers]
+crons = ["0 13 * * *", "0 23 * * *"]
+
+[vars]
+CHAT_ID = "6197133295"   # ← tu chat_id: un NÚMERO (ej. "123456789"), no el nombre del bot. Déjalo vacío y el bot te lo dice.
+
+[[d1_databases]]
+binding = "DB"
+database_name = "bill-notifier"
+database_id = "f851380a-a383-4c66-9730-1e260fc107cb"   # ← lo devuelve `npx wrangler d1 create bill-notifier`
